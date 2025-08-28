@@ -1,0 +1,55 @@
+/* resize videoview
+//        b.vvMain.setOnPreparedListener { mediaPlayer ->
+//            val videoRatio = mediaPlayer.videoWidth / mediaPlayer.videoHeight.toFloat()
+//            val screenRatio = b.vvMain.width / b.vvMain.height.toFloat()
+//            val scaleX = videoRatio / screenRatio
+//            if (scaleX >= 1f) {
+//                b.vvMain.scaleX = scaleX
+//            } else {
+//                b.vvMain.scaleY = 1f / scaleX
+//            }
+//        }
+
+
+
+//    fun resizeVideoView(videoView: VideoView, videoWidth: Int, videoHeight: Int, activityWidth: Int, activityHeight: Int) {
+//        val videoProportion = videoWidth.toFloat() / videoHeight
+//        val screenProportion = activityWidth.toFloat() / activityHeight
+//
+//        val lp = videoView.layoutParams
+//        if (screenProportion > videoProportion) {
+//            // صفحه عریض‌تر نسبت به ویدیو، ارتفاع محدود میشه
+//            lp.height = activityHeight
+//            lp.width = (activityHeight * videoProportion).toInt()
+//        } else {
+//            // صفحه بلندتر یا برابر ویدیو، عرض محدود میشه
+//            lp.width = activityWidth
+//            lp.height = (activityWidth / videoProportion).toInt()
+//        }
+//
+//        videoView.layoutParams = lp
+//    }
+
+
+
+//        b.vvMain.setOnPreparedListener { mp ->
+//            val videoWidth = mp.videoWidth
+//            val videoHeight = mp.videoHeight
+//
+//            val displayMetrics = Resources.getSystem().displayMetrics
+//            val screenWidth = displayMetrics.widthPixels
+//            val screenHeight = displayMetrics.heightPixels
+//
+//           // resizeVideoView(b.vvMain, videoWidth, videoHeight, screenWidth, screenHeight)
+//        }
+/* resize videoview
+
+
+/* setup timer
+    private fun setupTimer() {
+        timer(period = 1000) {
+            runOnUiThread {
+            }
+        }
+    }
+*/ setup timer

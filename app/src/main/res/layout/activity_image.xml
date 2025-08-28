@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none"
+    tools:context=".activity.media.ImageActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/layTop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/panelBackground2"
+            android:orientation="horizontal"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/btnBack"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_arrow_back"
+                app:backgroundTint="@android:color/transparent"
+                app:elevation="0dp"
+                app:fabCustomSize="30dp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/panelBackground2"
+                android:layout_weight="0.7">
+
+                <TextView
+                    android:id="@+id/tvFileName"
+                    style="@style/TextNormal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:text="File name" />
+
+                <TextView
+                    android:id="@+id/tvCreateDate"
+                    style="@style/TextSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:text="Create date"
+                    android:textColor="@color/foreground_less" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imgImage"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:src="@drawable/ic_image"
+            app:layout_constraintBottom_toTopOf="@+id/layOptions"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layTop" />
+
+        <LinearLayout
+            android:id="@+id/layOptions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bottom_navigation_background"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imgShare"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="0.25"
+                android:background="@color/panelBackground2"
+                android:padding="5dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_share"
+                app:shapeAppearanceOverlay="@style/CircleImageView" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imgCopy"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="0.25"
+                android:background="@color/panelBackground2"
+                android:padding="5dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_copy"
+                app:shapeAppearanceOverlay="@style/CircleImageView" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imgDelete"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="0.25"
+                android:background="@color/panelBackground2"
+                android:padding="5dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_delete"
+                app:shapeAppearanceOverlay="@style/CircleImageView" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imgProperties"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="0.25"
+                android:background="@color/panelBackground2"
+                android:padding="5dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_info"
+                app:shapeAppearanceOverlay="@style/CircleImageView" />
+
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

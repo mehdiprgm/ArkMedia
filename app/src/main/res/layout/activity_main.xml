@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:fillViewport="true"
+    tools:context=".activity.MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            style="@style/TextBig"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/app_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnMenu"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="15dp"
+            android:src="@drawable/ic_menu"
+            app:backgroundTint="@android:color/transparent"
+            app:elevation="0dp"
+            app:fabCustomSize="30dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvTitle" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnSearch"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_search"
+            app:backgroundTint="@android:color/transparent"
+            app:elevation="0dp"
+            app:fabCustomSize="30dp"
+            app:layout_constraintBottom_toBottomOf="@+id/btnMenu"
+            app:layout_constraintEnd_toStartOf="@+id/btnMenu"
+            app:layout_constraintTop_toTopOf="@+id/btnMenu" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcMain"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/layNavigationBottom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieEmpty"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="30dp"
+            android:background="@android:color/transparent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/empty_box"
+            app:lottie_speed="2" />
+
+        <TextView
+            android:id="@+id/tvEmpty"
+            style="@style/TextSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Noting found"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/lottieEmpty"
+            app:layout_constraintStart_toStartOf="@+id/lottieEmpty"
+            app:layout_constraintTop_toBottomOf="@+id/lottieEmpty" />
+
+        <LinearLayout
+            android:id="@+id/layNavigationBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/bottom_navigation_background"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imgGallery"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="0.33"
+                android:background="@color/panelBackground2"
+                android:padding="5dp"
+                android:scaleType="center"
+                android:src="@drawable/ic_image"
+                app:shapeAppearanceOverlay="@style/CircleImageView" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imgVideo"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="0.33"
+                android:background="@color/panelBackground2"
+                android:padding="5dp"
+                android:scaleType="center"
+                android:src="@drawable/ic_video"
+                app:shapeAppearanceOverlay="@style/CircleImageView" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imgAudio"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="0.33"
+                android:background="@color/panelBackground2"
+                android:padding="5dp"
+                android:scaleType="center"
+                android:src="@drawable/ic_music"
+                app:shapeAppearanceOverlay="@style/CircleImageView" />
+
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
